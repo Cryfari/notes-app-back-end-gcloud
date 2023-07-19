@@ -32,7 +32,7 @@ const routes = [
     method: 'DELETE',
     path: '/notes/{id}',
     handler: deleteNoteByIdHandler,
-  }
+  },
 ];
 
 module.exports = routes;
