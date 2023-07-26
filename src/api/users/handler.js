@@ -97,7 +97,7 @@ class UsersHandler {
   }
 
   /**
-   * mengambil user berdasarkan id
+   * mengambil user berdasarkan username
    * @param {request} request
    * @param {hapi} h
    */
