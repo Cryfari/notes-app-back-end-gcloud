@@ -4,3 +4,4 @@ cryfari_credentials.csv
 .env
 .prod.env
 package-lock.json
+src/api/uploads/file
