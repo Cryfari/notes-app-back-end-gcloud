@@ -27,7 +27,7 @@ const CollaborationsValidator = require('./validator/collaborations');
 
 // Export
 const _exports = require('./api/exports');
-const PublisherService = require('./services/pubsub/PublisherService');
+const PublisherService = require('./services/pubsub/publisherService');
 const ExportsValidator = require('./validator/exports');
 
 // uploads
