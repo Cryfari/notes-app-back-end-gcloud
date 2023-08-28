@@ -6,10 +6,12 @@ class ExportsHandler {
   /**
    * @param {service} service
    * @param {validator} validator
+   * @param {string} topicName
    */
-  constructor(service, validator) {
+  constructor(service, validator, topicName) {
     this._service = service;
     this._validator = validator;
+    this._topicName = topicName;
 
     this.postExportNotesHandler = this.postExportNotesHandler.bind(this);
   }
@@ -27,7 +29,7 @@ class ExportsHandler {
         targetEmail: request.payload.targetEmail,
       };
 
-      await this._service.sendMessage('export:notes', JSON.stringify(message));
+      await this._service.sendMessage(this._topicName, JSON.stringify(message));
 
       const response = h.response({
         status: 'success',

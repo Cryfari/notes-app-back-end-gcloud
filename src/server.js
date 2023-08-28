@@ -27,7 +27,7 @@ const CollaborationsValidator = require('./validator/collaborations');
 
 // Export
 const _exports = require('./api/exports');
-const ProducerService = require('./services/rabbitmq/ProducerService');
+const PublisherService = require('./services/pubsub/PublisherService');
 const ExportsValidator = require('./validator/exports');
 
 // uploads
@@ -118,8 +118,9 @@ const init = async () => {
     {
       plugin: _exports,
       options: {
-        service: ProducerService,
+        service: PublisherService,
         validator: ExportsValidator,
+        topicName: process.env.TOPIC_NAME,
       },
     },
     {
